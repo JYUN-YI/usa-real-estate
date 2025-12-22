@@ -1,0 +1,5 @@
+import joblib
+
+model_path = "/dbfs/FileStore/models/xgb_model.pkl"
+model = joblib.load(model_path)
+print("✅ Model loaded")
