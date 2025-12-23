@@ -98,6 +98,7 @@ The app returns an estimated house price based on the trained model.
 - Machine Learning: XGBoost, scikit-learn, scipy
 - Deployment: Gradio, Hugging Face Spaces
 - Version Control: Git, GitHub
+- Development Environment: Databricks Free Edition
 
 ## 📎 Dataset
 
