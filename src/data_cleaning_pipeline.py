@@ -5,6 +5,15 @@ import numpy as np
 def clean_data(df):
     df = df.copy()
 
+    # --- Make sure the necessary fields exist ---
+    required_cols = ['bed','bath','acre_lot','zip_code','season','metromicro','prev_sold_date','price']
+    for col in required_cols:
+        if col not in df.columns:
+            if col == 'prev_sold_date':
+                df[col] = pd.NaT
+            else:
+                df[col] = 0
+
     # --- prev_sold_date → season ---
     df['prev_sold_date'] = pd.to_datetime(df['prev_sold_date'], errors='coerce')
     df['season'] = df['prev_sold_date'].dt.month % 12 // 3 + 1
@@ -12,14 +21,14 @@ def clean_data(df):
 
     # --- metromicro ---
     if 'metromicro' in df.columns:
-        # 將缺失值設為 0 (Unknown)
+        # Set up missing valuse as 0 (Unknown)
         df['metromicro'] = df['metromicro'].fillna(0)
     else:
-        # 如果根本沒這欄
+        # If nothing for the column
         df['metromicro'] = 0
 
-    # --- 其他欄位缺失值可視需求填補 ---
-    # 例如 price、bed、bath、house_size、acre_lot 等
+    # --- Missing values ​​in other fields can be filled in as needed. ---
+    # e.g. price、bed、bath、house_size、acre_lot 等
     numeric_cols = ['price', 'bed', 'bath', 'house_size', 'acre_lot']
     for col in numeric_cols:
         if col in df.columns:
