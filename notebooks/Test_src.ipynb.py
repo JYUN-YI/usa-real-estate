@@ -1,8 +1,3 @@
-# Databricks notebook source
-# MAGIC %pip install gradio
-
-# COMMAND ----------
-
 # ==============================
 # Test_src.ipynb - Free Edition / UC Compatible (Safe Version)
 # ==============================
@@ -20,6 +15,7 @@ if project_root not in sys.path:
 
 import importlib
 
+from src import data_cleaning_pipeline
 importlib.reload(data_cleaning_pipeline)
 
 from src.data_cleaning_pipeline import clean_data
@@ -129,7 +125,7 @@ y_pred_log = np.clip(y_pred_log, a_min=None, a_max=20)  # 避免 overflow
 y_true_log = np.log1p(df_clean['price'].values)
 y_true_log = np.clip(y_true_log, a_min=None, a_max=20)  # 同樣限制上限
 
-# 計算 RMSE
+# Calculate RMSE
 rmse = np.sqrt(mean_squared_error(y_true_log, y_pred_log))
 y_pred = np.expm1(y_pred_log)  # 最後轉回 dollar scale
 print(f"🌟 Test RMSE (log-scale): {rmse:.4f}")
