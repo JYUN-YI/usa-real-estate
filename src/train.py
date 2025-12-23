@@ -3,8 +3,7 @@ from xgboost import XGBRegressor
 from src.features import create_features
 
 def train_model(df):
-    X, y = create_features(df)
-
+    X, y = create_features(df, training=True)
     model = XGBRegressor(
         n_estimators=500,
         learning_rate=0.05,
@@ -13,5 +12,4 @@ def train_model(df):
     )
     model.fit(X, y)
 
-    # ✅ 不存檔，直接回傳 model 物件
     return model
