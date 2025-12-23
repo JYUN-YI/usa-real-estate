@@ -12,15 +12,15 @@ def predict(df_input, model):
         raise ValueError("Please provide a trained model via the `model` argument.")
 
     # 1️⃣ Create features
-    X, _ = create_features(df_input)
+    X, _ = create_features(df_input, training=False)
 
-    # 2️⃣ 處理極端值
+    # 2️⃣ Handle extreme values
     X = X.replace([np.inf, -np.inf], np.nan).fillna(0)
 
     # 3️⃣ Predict log(price)
     y_pred_log = model.predict(X)
 
-    # 4️⃣ Clip 避免 overflow
+    # 4️⃣ Clip avoid overflow
     y_pred_log = np.clip(y_pred_log, a_min=None, a_max=20)  # log(price) 最大約 20 → ~5e8 美元
 
     # 5️⃣ Reverse log-transform
