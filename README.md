@@ -111,7 +111,7 @@ The app returns an estimated house price based on the trained model.
 - Cleaned, standardized, and feature-engineered dataset hosted on Hugging Face Datasets
 
 ## 🎨 Portfolio Showcase
-Please view and interact with the live application here: 
+Please view the report and interact with the live application here: 
 - [Kimberly Lin | Portfolio | USA Real Estate Analysis](https://kimberlylin.webflow.io/resources/usa-real-estate-analysis)
 - [Gradio App on Hugging Face Spaces](https://huggingface.co/spaces/jyunyilin/usa_real_estate)
 
