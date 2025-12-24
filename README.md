@@ -74,7 +74,7 @@ Key analyses include:
 ## 🔑 Feature Importance Analysis
 Feature importance was analyzed using:
 - XGBoost F-score
-- Random Forest Mean Decrease in Impurity (MDI
+- Random Forest Mean Decrease in Impurity (MDI)
 Both methods consistently highlighted:
 - Location-related features (ZIP code, metro/micro classification)
 - Property characteristics (bedrooms, bathrooms, lot size)
