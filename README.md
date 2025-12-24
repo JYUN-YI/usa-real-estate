@@ -66,7 +66,7 @@ Key analyses include:
   - RMSE (Root Mean Squared Error)
 
 📊 Model Performance
-| Model | RMSE (↓ better) |
+| Model | RMSE |
 |------|------|
 | XGBoost | ⭐ Best |
 | Random Forest | Baseline |
