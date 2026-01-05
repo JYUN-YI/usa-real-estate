@@ -93,10 +93,10 @@ An interactive house price prediction app is deployed using **Gradio** on **Hugg
 The app returns an estimated house price based on the trained model.
 
 ## ⚙️ Technologies Used
-- Programming: Python
+- Programming Language: Python
 - Data Processing: Pandas, NumPy
-- Visualization: Matplotlib, Seaborn
-- Machine Learning: XGBoost, scikit-learn, scipy
+- Data Visualization: Matplotlib, Seaborn
+- Machine Learning Model: XGBoost, scikit-learn, scipy
 - Deployment: Gradio, Hugging Face Spaces
 - Version Control: Git, GitHub
 - Development Environment: Databricks Free Edition
