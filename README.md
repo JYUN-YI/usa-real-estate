@@ -96,7 +96,7 @@ The app returns an estimated house price based on the trained model.
 - Programming Language: Python
 - Data Processing: Pandas, NumPy
 - Data Visualization: Matplotlib, Seaborn
-- Machine Learning Models: XGBoost, scikit-learn, scipy
+- Machine Learning Models: XGBoost, Scikit-Learn, Scipy
 - Deployment: Gradio, Hugging Face Spaces
 - Version Control: Git, GitHub
 - Development Environment: Databricks Free Edition
