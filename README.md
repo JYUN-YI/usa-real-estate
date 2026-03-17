@@ -47,6 +47,7 @@ The goal of this project is to:
 ├── .gitattributes
 └── .gitignore
 ```
+
 ## 🔍 Exploratory Data Analysis (EDA)
 Key analyses include:
 - Time Series Analysis: Long-term housing price trends
